@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
 
+
+
 function App() {
+  const [tasbeh, setTasbeh] = useState(0);
+
+// this is useEffect
+ useEffect( () => { 
+
+  fetch("https://fakestoreapi.com/products").then((data) => {
+    return data.json();
+  }).then( (exam) => {
+    console.log(exam)
+
+  }).catch((error) => {
+    console.log(error);
+  })
+
+
+ },[] );
+//  End of useEffect
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-header">
+        <h1>{tasbeh}</h1>
+        <button onClick={()=> setTasbeh(tasbeh +1)}>Plus</button>
+       
+      </div>
     </div>
   );
 }
