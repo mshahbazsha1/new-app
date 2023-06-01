@@ -5,7 +5,7 @@ function Categories() {
     return(
         <>
         
-        Categories
+        <h1>this is Categories page</h1>
         </>
     )
 }

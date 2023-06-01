@@ -5,7 +5,7 @@ function ContactUs () {
     return(
        <>
        
-       ContactUs
+       <h1>this is ContactUs page</h1>
        </>
     )
 }

@@ -5,7 +5,7 @@ function Card() {
     return(
         <>
         
-        card
+        <h1>this is Card page</h1>
         </>
     )
 }

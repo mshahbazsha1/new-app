@@ -8,6 +8,7 @@ function Home(props) {
             <>
                 <h1 className="my-3" > Our Products</h1>
                 <div className='row'>
+                    <h1>this is home page</h1>
                     {
                         props.products.map((product) => {
                             return (

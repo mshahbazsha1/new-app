@@ -7,8 +7,9 @@ import { Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Categories from './pages/Categories';
-import Card from './pages/Card';
+import Cart from './pages/Cart';
 import ContactUs from './pages/ContactUs';
+import ProductsDetails from './pages/ProductsDetails';
 
 
 
@@ -24,9 +25,6 @@ function App() {
       setProducts(res);
     })
 
-
-
-
   }, []);
   //  End of useEffect
 
@@ -38,7 +36,8 @@ function App() {
         <Route path='/' element={<Home products={products} />} />
         <Route path='/Categories' element={<Categories />}/>
         <Route path='/ContactUs' element={<ContactUs />}/>
-        <Route path='/Card' element={<Card />}/>
+        <Route path='/Cart' element={<Cart />}/>
+        <Route path='/Product/:id' element={<ProductsDetails />}/>
 
 
       </Routes>

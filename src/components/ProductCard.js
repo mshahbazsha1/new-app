@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function productCard(props) {
     return (
@@ -8,8 +9,8 @@ function productCard(props) {
                     <div className="card-body">
                         <h5 className="card-title text-truncate">{props.product.title}</h5>
                         <p className="card-text">${props.product.price}</p>
-                        <button className="btn btn-primary mx-2">View Details</button>
                         <button className="btn btn-primary">Add to cart</button>
+                        <Link to={`product/${props.product.id}`} className="btn btn-primary"> ViweDetails</Link>
                     </div>
                 </div>
             </div>
